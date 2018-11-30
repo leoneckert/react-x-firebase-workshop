@@ -20,7 +20,7 @@ import React, { Component } from 'react';
     2.3) pass this function as a prop to this component   
          and push the data inserted into the input field
          to Firebase.
-    2.4) You unlocked Level2! 
+    2.4) You unlocked Level 2! 
     
 
 
@@ -43,6 +43,12 @@ class LevelTWO extends Component {
         data: event.target.value
       })
     }
+    submitData(){
+      // here we need to use a function that is passed down
+      // as a prop from App.js and then use it to push
+      // the current state.data to the Database.
+
+    }
     
     render() { 
         return (  
@@ -58,7 +64,7 @@ class LevelTWO extends Component {
 
 
                 <input type="text" onChange={this.setData}></input>
-                <button>Push to Database</button>
+                <button onClick={this.submitData}>Push to Database</button>
 
 
 
