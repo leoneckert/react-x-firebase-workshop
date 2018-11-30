@@ -1,0 +1,123 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  outline: 1px solid black;
+  outline-offset: -20px;
+  position:relative;
+}
+
+.componentName{
+  position: absolute;
+  top:11px;
+  left:80px;
+  margin:0;
+  font-size:14px;
+  background-color:white;
+  padding-left:8px;
+  padding-right:8px;
+}
+
+.section{
+  flex-grow: 1;
+  height: 300px;
+  width:30%;
+  min-width:250px;
+  padding: 40px;
+  outline: 1px solid black;
+  outline-offset: -20px;
+  position:relative;
+}
+.section:hover{
+  outline: 1px solid blue;
+}
+.section:hover .componentName{
+  color: blue;
+}
+
+.intro{
+  width:100%;
+  background: linear-gradient(-45deg,#fddbff, #ffb2e7, #ff84da, #4286f4, #f2f7ff, #55709b);
+  animation: Gradient 15s ease infinite;
+  background-size: 400% 400%;
+  padding: 10px;
+  text-align:center;
+  box-sizing: border-box;
+}
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+.intro p{
+  font-size: 18px;
+  mix-blend-mode: difference;
+  color: white;
+  font-weight: bold;
+}
+
+.title{
+  height:20px;
+  margin: 10px 0 10px 0;
+}
+
+.content{
+  height:220px;
+  overflow:scroll;
+}
+
+.explanation{
+  position: absolute;
+  background-color: black;
+  left: 20px;
+  bottom: 20px;
+  height: 48px;
+  margin-right: 20px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}
+.section:hover .explanation{
+  background-color: blue;
+}
+
+.explanation a{
+  color: #ff84da;
+}
+.explanation p{
+  padding:4px;
+  font-weight: bold;
+  color: white;
+  font-size: 10px;
+  margin:0;
+}
+
+
+
+.locked .content{
+  visibility: hidden;
+}
+.locked .explanation{
+  visibility: hidden;
+}
+.locked{
+  opacity:0.2;
+}
+.locked:after{
+  font-size: 20px;
+  font-weight: bold;
+  content: "[LOCKED] ";
+  margin:auto;
+  display:inline-block;
+}
+.locked:hover{
+  outline: 1px solid black;
+}
+.locked:hover .componentName{
+  color: black;
+}
