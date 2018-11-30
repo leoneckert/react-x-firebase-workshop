@@ -25,7 +25,7 @@ import {LevelONE, LevelTWO} from './Levels'
 // on your command line type: npm install firebase --save
 // then uncomment the next line:
 
-import firebase from 'firebase';
+//import firebase from 'firebase';
 
 // in order to push data to a database (in the 'cloud') 
 // we need to make sure such place exists and 
@@ -44,15 +44,15 @@ import firebase from 'firebase';
 // Great, now we can uncomment the next line to import the keys 
 // (during runtime) into this script:
 
-import {firebase_config} from './firebase_config.js' //add this to .gitignore!
+//import {firebase_config} from './firebase_config.js' //add this to .gitignore!
 
 // finally, we do like we are told in the firebase docs
 // and initialize the connection to the firebase project we created
 // by passing the keys into the following function and then access the 
 // database functionality:
 
-firebase.initializeApp(firebase_config);
-const database = firebase.database();
+//firebase.initializeApp(firebase_config);
+//const database = firebase.database();
 
 //FYI, firebase's documentation for this step can be found here: https://firebase.google.com/docs/web/setup
 
@@ -69,11 +69,10 @@ class App extends Component {
     // our Firebase project. To test the function, we use a dummy 
     // button in this very component (prepared below)
 
-    // alert("Dummy button works!");
+    alert("Dummy button works!");
 
     // we can learn how to push to the database from here:
     // https://firebase.google.com/docs/database/web/lists-of-data
-    let reference = database.ref(path).push(data);
 
   }
   render() {
@@ -82,8 +81,8 @@ class App extends Component {
         {/* Don't mind this :) just inserting the Level's title*/}{t()}
 
 
-        <LevelONE pushToDB={this.pushToDB} />
-        {/*<button onClick={() => this.pushToDB('leon', 9)}>DUMMY</button>*/}
+        <LevelONE />
+        {/*<button onClick={this.pushToDB}>DUMMY</button>*/}
         <LevelTWO />
         <LevelTWO locked/>
         <LevelTWO locked/>
