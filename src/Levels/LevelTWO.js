@@ -87,7 +87,7 @@ export default LevelTWO;
 //
 const componentName = "<LevelTWO.js/>"
 const levelIdx = 2;
-const componentDescription = "Storing quantitative data"
+const componentDescription = "Retrieving list data in real time"
 let ex = [
   "Here we push data objects to our database using firebase's ",
   <code>.push()</code>,

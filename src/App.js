@@ -82,7 +82,7 @@ class App extends Component {
 
 
         <LevelONE />
-        //<button onClick={this.pushToDB}>DUMMY</button>
+        {/*<button onClick={this.pushToDB}>DUMMY</button>*/}
         <LevelTWO locked/>
         <LevelTWO locked/>
         <LevelTWO locked/>

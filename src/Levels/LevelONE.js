@@ -117,9 +117,9 @@ const componentName = "<LevelONE.js/>"
 const levelIdx = 1;
 const componentDescription = "Storing quantitative data"
 let ex = [
-  "Here we push data objects to our database using firebase's ",
+  "We use firebase's ",
   <code>.push()</code>,
-  " function. It is a lot like pushing to an array. ",
+  " function to push the input's value to our Databse in the ~cloud~. This method is great for logging quantitative data. ",
   <a target='_blank' href='https://firebase.google.com/docs/database/web/lists-of-data'>Documentation</a>,
 ];
 function t(){
