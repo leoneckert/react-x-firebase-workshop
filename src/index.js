@@ -8,6 +8,7 @@ ReactDOM.render(
   <div>
     <div className="intro"><p>React x Firebase Workshop</p></div>
     <App />
+    <div className="intro"><p>thanks for playing, Leon</p></div>
   </div>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

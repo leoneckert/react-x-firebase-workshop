@@ -2,6 +2,7 @@ import {Exp} from '../Other';
 import React, { Component } from 'react';
 
 {/*
+  LEVEL 1
   INSTRUCTIONS
 
   below is a component for a text input box. 
@@ -37,7 +38,6 @@ class LevelTWO extends Component {
         data: '',
       };
       this.setData = this.setData.bind(this);
-      this.submitData = this.submitData.bind(this);
     };
     setData = (event) => {
       this.setState({
@@ -48,7 +48,6 @@ class LevelTWO extends Component {
       // here we need to use a function that is passed down
       // as a prop from App.js and then use it to push
       // the current state.data to the Database.
-      this.props.pushToDB("leon", {text: this.state.data});
 
     }
     
@@ -118,12 +117,7 @@ export default LevelTWO;
 const componentName = "<LevelONE.js/>"
 const levelIdx = 1;
 const componentDescription = "Storing quantitative data"
-let ex = [
-  "We use firebase's ",
-  <code>.push()</code>,
-  " function to push the input's value to our Databse in the ~cloud~. This method is great for logging quantitative data. ",
-  <a target='_blank' href='https://firebase.google.com/docs/database/web/lists-of-data'>Documentation</a>,
-];
+let ex =  <span>Here we push data objects to our database using firebase's <code>.push()</code> method. It is a lot like pushing to an array. <a target='_blank' href='https://firebase.google.com/docs/database/web/lists-of-data'>Documentation</a></span>;
 function t(){
   return(<div><code className='componentName'>{componentName}</code><p className="title"><b>Level {levelIdx}</b> {componentDescription}</p></div>);
 }

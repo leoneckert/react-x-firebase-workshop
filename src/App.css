@@ -63,7 +63,7 @@
 }
 
 .title{
-  height:20px;
+  height:35px;
   margin: 10px 0 10px 0;
 }
 
@@ -71,6 +71,65 @@
   height:220px;
   overflow:scroll;
 }
+
+
+
+.levelTWO ul{
+  padding: 0px;
+  height: 150px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 1px solid black;
+  border-radius:5px;
+}
+
+.levelTWO ul li:nth-child(odd) {
+  background-color: black;
+  color: white;
+}
+.section:hover .levelTWO ul li:nth-child(odd) {
+  background-color: blue;
+  color: white;
+}
+.levelTWO ul li{
+  list-style: none;
+  padding: 2px 3px 2px 3px;
+}
+.levelTHREE input{
+  margin-bottom:10px;
+}
+.levelTHREE input:nth-child(odd){
+  border: none;
+}
+.levelTHREE p{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.nameDisplay{
+  font-size: 20px;
+  font-weight: bold;
+  mix-blend-mode: difference;
+  color: white;
+}
+.colorDisplay{
+  height: 120px;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .explanation{
   position: absolute;
@@ -121,3 +180,6 @@
 .locked:hover .componentName{
   color: black;
 }
+
+
+
