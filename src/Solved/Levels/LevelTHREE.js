@@ -1,4 +1,4 @@
-import {Exp} from '../Other';  
+import {Exp} from '../../Other';  
 import React, { Component } from 'react';
 
 {/*
@@ -33,7 +33,10 @@ import React, { Component } from 'react';
     2.2) pass down the function as a prop to this very component
     and make sure name and color end up on the data base when
     hitting the submit button.
-    2.3) That was fast, you unlocked Level 4! 
+    2.3) BONUS task: include a message that gives feedback to 
+    the visitor of this page whether the input has been successfully
+    saved to the DB or if there was any error etc.
+    2.4) That was fast, you unlocked Level 4! 
 
 */}
 
@@ -46,6 +49,7 @@ class LevelTHREE extends Component {
         color: '#ffffff'
       };
       this.setData = this.setData.bind(this);
+      this.submitData = this.submitData.bind(this);
     };
     setData(event){
       // below we use a dynamic key
@@ -54,6 +58,14 @@ class LevelTHREE extends Component {
       this.setState({
         [event.target.name]: event.target.value.toLowerCase()
       });
+
+      // the moment we type a name
+      // we clear out the message (bonus task 2.3)
+      this.props.clearMessage();
+    }
+
+    submitData(){
+      this.props.setOnDB(this.state.name, this.state.color);
     }
     
     render() { 
@@ -69,15 +81,19 @@ class LevelTHREE extends Component {
 
 
                 <label>Name </label>
-                {/*giving the inpurt tags a name attribute let's use distinguish
+                {/*giving the input tags a name attribute let's use distinguish
                 them in the setData function using the event variable*/}
                 <input type="text" onChange={this.setData} name='name'></input>
                 <br></br> {/*just a line break here */}
                 <label>Favorite color </label>
                 <input type="color" defaultValue="#ffffff" onChange={this.setData} name='color'></input>
                 <br></br>
-                <button>Set on Database</button>
-
+                <button onClick={this.submitData}>Set on Database</button>
+                {/*
+                  we added this <p> tag to display 
+                  a message to the user (BONUS task 2.3)
+                */}
+                <p>{this.props.submitMessage}</p>
 
 
 

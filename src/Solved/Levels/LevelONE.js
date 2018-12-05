@@ -1,4 +1,4 @@
-import {Exp} from '../Other';  
+import {Exp} from '../../Other';  
 import React, { Component } from 'react';
 
 {/*
@@ -49,7 +49,7 @@ class LevelTWO extends Component {
       // here we need to use a function that is passed down
       // as a prop from App.js and then use it to push
       // the current state.data to the Database.
-
+      this.props.pushToDB("data", {text: this.state.data});
     }
     
     render() { 

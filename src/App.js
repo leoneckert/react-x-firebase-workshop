@@ -37,11 +37,21 @@ import {LevelONE, LevelTWO, LevelTHREE, LevelFOUR} from './Levels'
 // ...
 // got them? Now we are doing things right and put our credentials in
 // a seperate file called firebase_config.js which I prepared
-// in this very folder for you.
-// ... done? Let's now add this file to a .gitignore 
+// in this very folder for you. Rename the 
+// firebase_config-DONT_IGNORE.js file to firebase_config.js, then
+// fill in the "..." gaps and save it.
+// 
+// ... done? Let's now add this file to the .gitignore file
 // to make sure we won't ever accidentally put it on our public 
-// Github account.
-// Great, now we can uncomment the next line to import the keys 
+// Github account. A .gitignore file already exists in this folder
+// you will not see it in your Finder (because the filename starts 
+// with a dot) but should be able to find it in your atom editor 
+// sidebar....(or any other editor you might use).
+// on the first line type "firebase_config.js"
+//
+// ... oops i already did this for you, but thought it would be
+// a good idea for you to see and learn about .gitignore files :)
+// great, now we can uncomment the next line to import the keys 
 // (during runtime) into this script:
 
 //import {firebase_config} from './firebase_config.js' //add this to .gitignore!
@@ -51,10 +61,10 @@ import {LevelONE, LevelTWO, LevelTHREE, LevelFOUR} from './Levels'
 // by passing the keys into the following function and then access the 
 // database functionality:
 
-//firebase.initializeApp(firebase_config);
+//firebase.initializeapp(firebase_config);
 //const database = firebase.database();
 
-//FYI, firebase's documentation for this step can be found here: https://firebase.google.com/docs/web/setup
+//fyi, firebase's documentation for this step can be found here: https://firebase.google.com/docs/web/setup
 
 
 class App extends Component {

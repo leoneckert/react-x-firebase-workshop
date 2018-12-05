@@ -1,4 +1,4 @@
-import {Exp} from '../Other';  
+import {Exp} from '../../Other';  
 import React, { Component } from 'react';
 
 {/*
@@ -49,7 +49,6 @@ class LevelFOUR extends Component {
       };
       this.setData = this.setData.bind(this);
       this.submitData = this.submitData.bind(this);
-      this.showResult = this.showResult.bind(this);
     };
     setData(event){
       this.setState({
@@ -60,14 +59,16 @@ class LevelFOUR extends Component {
       this.props.searchDB(this.state.data)
     }
     showResult(){
-      let dummyName = "gustav";
-      let dummyColor = "blue";
+      //let dummyName = "gustav";
+      //let dummyColor = "blue";
       
+        //all we had to do here was relace the dummy data with the information
+        //that gets passed down as props to this component
         return(
-          <div className="colorDisplay" style={{backgroundColor: dummyColor}}>
+          <div className="colorDisplay" style={{backgroundColor: this.props.color}}>
             <p className="nameDisplay">
-              {dummyName}<br></br>
-              {dummyColor}
+              {this.props.name}<br></br>
+              {this.props.color}
             </p>
           </div>
         )
