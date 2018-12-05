@@ -11,7 +11,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 ReactDOM.render(
   <Router>
     <div>
-      <div className="intro"><p>React x Firebase Workshop</p></div>
+
+      <div className="intro"><p>React x Firebase Workshop <a href="https://github.com/leoneckert/react-x-firebase-workshop" target="_blank">(it's here)</a></p></div>
+
       <Route exact path="/" component={()=>
             <div>
 

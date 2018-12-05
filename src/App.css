@@ -6,6 +6,7 @@
   outline-offset: -20px;
   position:relative;
 }
+
 .linkToSolved {
   text-decoration: none;
   color: white;
@@ -60,6 +61,13 @@
 	}
 }
 .intro p{
+  font-size: 18px;
+  mix-blend-mode: difference;
+  color: white;
+  font-weight: bold;
+}
+
+.intro a{
   font-size: 18px;
   mix-blend-mode: difference;
   color: white;
