@@ -5,11 +5,11 @@ This is an interactive coding workshop. You clone this repo and the complete the
 
 ## from this:
 
-![blank workshop](   )
+![blank workshop]( https://github.com/leoneckert/react-x-firebase-workshop/blob/master/screenshots/start.png )
 
 ## to this:
 
-![solved workshop](   )
+![solved workshop]( https://github.com/leoneckert/react-x-firebase-workshop/blob/master/screenshots/solved.png )
 
 ## Get Started
 
