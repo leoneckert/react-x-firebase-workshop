@@ -21,8 +21,9 @@ ReactDOM.render(
         
               <div className="intro"><p>
                 thanks for playing, Leon
+                <br/>
                 <Link className="linkToSolved" to="/solved">
-                  <p >(click here to see finished Levels)</p>
+                  <span >(click here to see finished Levels)</span>
                 </Link>
               </p></div>
 
@@ -35,8 +36,10 @@ ReactDOM.render(
 
               <div className="intro"><p>
                 thanks for playing, Leon
+                <br/>
                 <Link className="linkToSolved" to="/">
-                  <p >(click here to get back to the unfinished version)</p>
+          
+                  <span>(click here to get back to the unfinished version)</span>
                 </Link>
               </p></div>
 
