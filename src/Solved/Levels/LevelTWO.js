@@ -35,11 +35,10 @@ class LevelTWO extends Component {
     constructor(props){
       super(props)
       this.state ={};
-      this.renderList = this.renderList.bind(this);
     };
 
     // this function renders out list elements dynamically
-    renderList(){
+    renderList = () => {
       // dummyData, we aim to replace this with data that is
       // passed down from App.js as a prop
       // let dummyData = ["dummy data item 1", "dummy data item 2", "dummy data item 3"];

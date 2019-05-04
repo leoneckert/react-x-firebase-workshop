@@ -47,15 +47,13 @@ class LevelFOUR extends Component {
       this.state ={
         data: '',
       };
-      this.setData = this.setData.bind(this);
-      this.submitData = this.submitData.bind(this);
     };
-    setData(event){
+    setData = (event) => {
       this.setState({
         data: event.target.value.toLowerCase(),
       })
     }
-    submitData(){
+    submitData = () => {
       this.props.searchDB(this.state.data)
     }
     showResult(){

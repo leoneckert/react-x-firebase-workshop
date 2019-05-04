@@ -76,8 +76,6 @@ class App extends Component {
       name: '',
       color: '',
     };
-    this.setColorByName = this.setColorByName.bind(this);
-    this.clearSubmitMessage = this.clearSubmitMessage.bind(this);
   }
   
   // LEVEL 1
@@ -118,7 +116,7 @@ class App extends Component {
       // once for every item that exists there already when
       // this site is first visited/the listener is created
       this.setState({
-        dataArray: this.state.dataArray.concat([data.val().text])
+        dataArray: this.state.dataArray.concat(data.val().text)
       })
     });
   }
@@ -127,7 +125,7 @@ class App extends Component {
 
   // LEVEL 3
   //
-  setColorByName(name, color){
+  setColorByName = (name, color) => {
     // we only accept favorite colors
     // of people with a name
     // if no name is supplied we return a grumpy 
@@ -167,7 +165,7 @@ class App extends Component {
     });
   }
 
-  clearSubmitMessage(){
+  clearSubmitMessage = () => {
     // this is a simple function to clear the message in Level 3
     // we pass it to Level 3's component as a prop
     this.setState({submitMessage: "" });

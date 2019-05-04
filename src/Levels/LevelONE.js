@@ -37,15 +37,13 @@ class LevelTWO extends Component {
       this.state ={
         data: '',
       };
-      this.setData = this.setData.bind(this);
-      this.submitData = this.submitData.bind(this);
     };
-    setData(event){
+    setData = (event) => {
       this.setState({
         data: event.target.value
       })
     }
-    submitData(){
+    submitData = () => {
       // here we need to use a function that is passed down
       // as a prop from App.js and then use it to push
       // the current state.data to the Database.

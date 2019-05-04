@@ -11,7 +11,7 @@ import React, { Component } from 'react';
   how we retrieve it.
 
   1) see if you can understand what it does right now. 
-    -> Two input are using the same setData function
+    -> Two inputs are using the same setData function
     to update this component's local state as the inputs
     are changed. This is made possible by giving the inputs
     a name attribute. This name can be 'read' from the event variable
@@ -48,10 +48,8 @@ class LevelTHREE extends Component {
         name: '',
         color: '#ffffff'
       };
-      this.setData = this.setData.bind(this);
-      this.submitData = this.submitData.bind(this);
     };
-    setData(event){
+    setData = (event) => {
       // below we use a dynamic key
       // I JUST learnt this is even possible 
       // (it wasn't in older JavaScript)
@@ -64,7 +62,7 @@ class LevelTHREE extends Component {
       this.props.clearMessage();
     }
 
-    submitData(){
+    submitData = () => {
       this.props.setOnDB(this.state.name, this.state.color);
     }
     
