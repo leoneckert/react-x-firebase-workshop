@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import SolvedApp from './Solved/App';
 import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -21,28 +20,10 @@ ReactDOM.render(
         
               <div className="intro"><p>
                 thanks for playing, Leon
-                <Link className="linkToSolved" to="/solved">
-                  <p >(click here to see finished Levels)</p>
-                </Link>
               </p></div>
 
             </div>
         } />
-      <Route exact path="/solved" component={()=>
-            <div>
-
-              <SolvedApp/>
-
-              <div className="intro"><p>
-                thanks for playing, Leon
-                <Link className="linkToSolved" to="/">
-                  <p >(click here to get back to the unfinished version)</p>
-                </Link>
-              </p></div>
-
-            </div>
-        } />
-
 
 
     </div>
