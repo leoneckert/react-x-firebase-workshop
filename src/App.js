@@ -61,7 +61,7 @@ import {LevelONE, LevelTWO, LevelTHREE, LevelFOUR} from './Levels'
 // by passing the keys into the following function and then access the 
 // database functionality:
 
-//firebase.initializeapp(firebase_config);
+//firebase.initializeApp(firebase_config);
 //const database = firebase.database();
 
 //fyi, firebase's documentation for this step can be found here: https://firebase.google.com/docs/web/setup
