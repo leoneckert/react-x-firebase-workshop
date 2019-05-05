@@ -5,6 +5,7 @@ export const firebase_config = {
     databaseURL: "...",
     projectId: "...",
     storageBucket: "...",
-    messagingSenderId: "..."
+    messagingSenderId: "...",
+    appId: "..."
 };
 
