@@ -72,7 +72,7 @@ class App extends Component {
     super(props);
     this.state = {};
   }
-  pushToDB(path, data){
+  pushToDB = (path, data) => {
     // Level 1 - read this if you are coming here from Levels/LevelONE.js
     // 
     // this is where want to create a simple function to push data to

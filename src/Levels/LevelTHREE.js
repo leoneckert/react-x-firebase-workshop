@@ -45,9 +45,8 @@ class LevelTHREE extends Component {
         name: '',
         color: '#ffffff'
       };
-      this.setData = this.setData.bind(this);
     };
-    setData(event){
+    setData = (event) => {
       // below we use a dynamic key
       // I JUST learnt this is even possible 
       // (it wasn't in older JavaScript)
